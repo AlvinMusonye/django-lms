@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Student
 
 def index(request):
  
@@ -14,6 +15,11 @@ def students_list(request):
     ]
     ctx = {'students': students}
     return render(request, 'students_list.html', ctx)
+
+def students_list(request):
+    students = Student.objects.all()
+    ctx = {'students': students}
+    return render(request, 'students_list.html', ctx  )
 
 def courses(request):
     course =[

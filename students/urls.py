@@ -5,5 +5,7 @@ urlpatterns = [
      path('students/',students_list, name='students'),
      path('courses/',courses, name='courses'),
      path('app/',app, name='app'),
-     path('blogs/',blogs, name ='blogs')
+     path('blogs/',blogs, name ='blogs'),
+
+     
 ]
