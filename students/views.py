@@ -47,3 +47,11 @@ def blogs(request):
     ]
     ctx = {'blogs' : blogs}
     return render(request, 'blog_list.html', ctx)
+
+
+
+def blog_list(request):
+    blogs = Blog.objects.all()
+    context = {'blogs': blogs}
+    return render(request, 'blog_list.html', context)
+
